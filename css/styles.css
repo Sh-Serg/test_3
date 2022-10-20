@@ -58,23 +58,26 @@ img {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 94px;
 }
 header {
+  border-bottom: 1px solid #ececec;
+}
+header .container {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-  outline: red dashed 1px;
 }
 
 .logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
-  margin-right: 93px;
 }
 .begin-logo {
   color: var(--accent-color);
@@ -83,8 +86,15 @@ header {
 nav ul {
   display: flex;
 }
+
+.nav-link {
+  display: block;
+}
 .nav-link,
 .contact-inf {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -111,36 +121,65 @@ nav ul {
   color: var(--accent-color);
 }
 .hero {
-  text-align: center;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero.jpg);
+  /* bac ; */
   background-color: var(--background-footer);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
 }
 .hero h1 {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 30px;
 }
 .hero button {
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   color: var(--white-color);
-  background-color: var(--accent-color);
-  text-align: center;
   letter-spacing: 0.06em;
 }
 .hero button:hover {
   cursor: pointer;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .advantages-list {
-  outline: red dashed 1px;
-  margin-top: 94px;
+  padding-top: 94px;
   display: flex;
   justify-content: space-between;
 }
@@ -163,6 +202,12 @@ nav ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
+.work {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .work-title,
 .team-title {
   font-weight: 700;
@@ -178,9 +223,9 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  outline: red dashed 1px;
 }
 .team {
+  padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--background-accent);
 }
@@ -197,15 +242,17 @@ nav ul {
 }
 
 .team-list {
-  /* outline: red dashed 1px; */
-  padding-bottom: 30px;
   background: #ffffff;
-  /* material shadow v1 */
 
+  border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
+
+.user-case {
+  padding: 30px;
+}
+
 .user-name,
 .user-position {
   font-size: 16px;
@@ -216,12 +263,17 @@ nav ul {
 .user-name {
   font-weight: 500;
   color: var(--title-color);
-  margin-top: 30px;
+
   margin-bottom: 10px;
 }
 
 footer {
   background-color: var(--background-footer);
+}
+
+footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 address {
   font-style: normal;
@@ -232,6 +284,11 @@ address {
 .address {
   color: var(--white-color);
 }
+
+.address {
+  padding-top: 20px;
+}
+
 .address,
 .footer-contact {
   font-size: 14px;
@@ -239,6 +296,8 @@ address {
   letter-spacing: 0.03em;
 }
 .footer-contact {
+  padding-top: 9px;
+
   color: var(--white-color-footer);
 }
 .footer-contact:hover,
@@ -247,6 +306,8 @@ address {
 }
 /* * Portfolio styles*/
 .projects {
+  padding-top: 94px;
+  padding-bottom: 94px;
   display: flex;
   flex-direction: column;
 }
@@ -256,7 +317,6 @@ address {
   justify-content: center;
   margin-bottom: 50px;
   margin-top: 0;
-  outline: red dashed 1px;
 }
 
 .filter-item {
@@ -287,19 +347,26 @@ address {
   margin: 0px;
   display: flex;
   flex-wrap: wrap;
-  outline: red dashed 1px;
   margin-left: -30px;
   margin-top: -30px;
 }
 
 .portfolio li {
-  border: 1px solid #eeeeee;
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
+
+.portfolio_case {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
 .portfolio-title {
-  padding-left: 24px;
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -307,7 +374,6 @@ address {
   color: var(--title-color);
 }
 .portfolio-description {
-  padding-left: 24px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
